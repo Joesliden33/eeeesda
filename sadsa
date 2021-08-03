@@ -1,3 +1,28 @@
+    local Library = {loadstring(game:HttpGet("https://raw.githubusercontent.com/Joesliden33/eeeesda/main/sadsa", true))()}
+
+function Library:Window(Name, Color, SizeY)
+    local CoreGui = game:GetService("CoreGui")
+    local UserInput = game:GetService("UserInputService")
+    local RunService = game:GetService("RunService")
+    local ScreenGui = Instance.new("ScreenGui")
+    local Drag = Instance.new("Frame")
+    local Main = Instance.new("Frame")
+    local Frame = Instance.new("Frame")
+    local Heading = Instance.new("Frame")
+    local LabelListLayout = Instance.new("UIListLayout")
+    local Title = Instance.new("TextLabel")
+    local Background = Instance.new("Frame")
+    local Content = Instance.new("Frame")
+    local TabsListLayout = Instance.new("UIListLayout")
+    local Tabs = Instance.new("Frame")
+    local oldTab
+    getgenv().WindowThemeColor = Color
+
+    for _, gui in next, CoreGui:GetChildren() do
+        if gui.Name == Name then
+            gui:Destroy()
+        end
+    end
     ScreenGui.Name = Name
     ScreenGui.Parent = CoreGui
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
